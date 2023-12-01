@@ -23,10 +23,10 @@ require('pckr').add {
         'nvim-telescope/telescope.nvim', tag = '0.1.5', requires = { {'nvim-lua/plenary.nvim'} }
     },
     {
-        "rose-pine/neovim",
+        "logico/typewriter-vim",
         as = "rose-pine",
         config = function ()
-            vim.cmd("colorscheme rose-pine")
+            vim.cmd("colorscheme typewriter-night")
         end
     },
     {
