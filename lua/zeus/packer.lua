@@ -18,6 +18,7 @@ bootstrap_pckr()
 
 require('pckr').add {
     "williamboman/mason.nvim",
+    "lewis6991/gitsigns.nvim",
     {
         'nvim-telescope/telescope.nvim', tag = '0.1.5', requires = { {'nvim-lua/plenary.nvim'} }
     },
@@ -53,5 +54,5 @@ require('pckr').add {
         config = function()
             require("better_escape").setup()
         end,
-    }
+    },
 }
