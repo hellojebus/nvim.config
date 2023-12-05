@@ -54,4 +54,8 @@ require('pckr').add {
             require("better_escape").setup()
         end,
     },
+    {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 }
