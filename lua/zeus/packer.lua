@@ -23,9 +23,9 @@ require('pckr').add {
         'nvim-telescope/telescope.nvim', tag = '0.1.5', requires = { {'nvim-lua/plenary.nvim'} }
     },
     {
-        "fcpg/vim-farout",
+        "conweller/muted.vim",
         config = function ()
-            vim.cmd("colorscheme farout")
+            vim.cmd("colorscheme muted")
         end
     },
     {
