@@ -57,5 +57,11 @@ require('pckr').add {
     {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    }
+    },
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        config = function()
+            require("ibl").setup()
+        end
+    },
 }
