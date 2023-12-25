@@ -64,4 +64,7 @@ require('pckr').add {
             require("ibl").setup()
         end
     },
+    {
+        "echasnovski/mini.nvim"
+    },
 }
