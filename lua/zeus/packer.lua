@@ -65,6 +65,6 @@ require('pckr').add {
         end
     },
     {
-        "echasnovski/mini.nvim"
+        "echasnovski/mini.pairs"
     },
 }
