@@ -71,7 +71,9 @@ require('pckr').add {
           "akinsho/toggleterm.nvim",
           tag = "v2.9.0",
           config = function()
-            require("toggleterm").setup()
+            require("toggleterm").setup{
+              start_in_insert = true,
+            }
           end
         },
       }
