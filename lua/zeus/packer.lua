@@ -17,27 +17,27 @@ end
 bootstrap_pckr()
 
 require('pckr').add {
-    "williamboman/mason.nvim",
-    "lewis6991/gitsigns.nvim",
-    {
-        'nvim-telescope/telescope.nvim', tag = '0.1.5', requires = { {'nvim-lua/plenary.nvim'} }
-    },
-    {
-        "conweller/muted.vim",
-        config = function ()
-            vim.cmd("colorscheme muted")
-        end
-    },
-    {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-    },
-    {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v3.x',
-        requires = {
-            {'williamboman/mason.nvim'},
-            {'williamboman/mason-lspconfig.nvim'},
+  "williamboman/mason.nvim",
+  "lewis6991/gitsigns.nvim",
+  {
+    'nvim-telescope/telescope.nvim', tag = '0.1.5', requires = { {'nvim-lua/plenary.nvim'} }
+  },
+  {
+    "conweller/muted.vim",
+    config = function ()
+      vim.cmd("colorscheme muted")
+    end
+  },
+  {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  },
+  {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v3.x',
+    requires = {
+      {'williamboman/mason.nvim'},
+      {'williamboman/mason-lspconfig.nvim'},
 
             -- LSP Support
             {'neovim/nvim-lspconfig'},
@@ -46,25 +46,32 @@ require('pckr').add {
             {'hrsh7th/nvim-cmp'},
             {'hrsh7th/cmp-nvim-lsp'},
             {'L3MON4D3/LuaSnip'},
-        }
-    },
-    {
-        "max397574/better-escape.nvim",
-        config = function()
+          }
+        },
+        {
+          "max397574/better-escape.nvim",
+          config = function()
             require("better_escape").setup()
-        end,
-    },
-    {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    },
-    {
-        "lukas-reineke/indent-blankline.nvim",
-        config = function()
+          end,
+        },
+        {
+          'nvim-lualine/lualine.nvim',
+          requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+        },
+        {
+          "lukas-reineke/indent-blankline.nvim",
+          config = function()
             require("ibl").setup()
-        end
-    },
-    {
-        "echasnovski/mini.pairs"
-    },
-}
+          end
+        },
+        {
+          "echasnovski/mini.pairs"
+        },
+        {
+          "akinsho/toggleterm.nvim",
+          tag = "v2.9.0",
+          config = function()
+            require("toggleterm").setup()
+          end
+        },
+      }
