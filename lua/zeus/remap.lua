@@ -7,7 +7,6 @@ Map("v", "K", ":m '<-2<CR>gv=gv")
 --replace current buffer
 Map("n", "<leader>r", [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
 
-
 -- Files
 Map("n", "<leader>1", ":Ex<CR>")
 
