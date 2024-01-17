@@ -8,7 +8,7 @@ Map("v", "K", ":m '<-2<CR>gv=gv")
 Map("n", "<leader>r", [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
 
 -- Files
-Map("n", "<leader>1", ":Neotree<CR>")
+Map("n", "<leader>1", ":Ex<CR>")
 
 -- Git
 Map("n", "<leader>hd", ":Gitsigns diffthis<CR>")

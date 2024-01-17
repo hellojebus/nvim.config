@@ -23,23 +23,17 @@ require('pckr').add {
     'nvim-telescope/telescope.nvim', tag = '0.1.5', requires = { {'nvim-lua/plenary.nvim'} }
   },
   {
-    "conweller/muted.vim",
+    'jvgrootveld/telescope-zoxide'
+  },
+  {
+    "rebelot/kanagawa.nvim",
     config = function ()
-      vim.cmd("colorscheme muted")
+      vim.cmd("colorscheme kanagawa")
     end
   },
   {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
-  },
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    requires = { 
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
-    }
   },
   {
     'VonHeikemen/lsp-zero.nvim',
