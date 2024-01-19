@@ -18,3 +18,7 @@ Map("n", "<leader>hb", ":Gitsigns toggle_current_line_blame<CR>")
 -- ToggleTerm
 Map("n", "<leader>t", ":ToggleTerm<CR>")
 Map("t", "<Esc>", "<C-\\><C-n>")
+
+-- aerial
+Map("n", "<leader>o", ":AerialToggle<CR>")
+

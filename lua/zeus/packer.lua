@@ -41,42 +41,46 @@ require('pckr').add {
     requires = {
       {'williamboman/mason.nvim'},
       {'williamboman/mason-lspconfig.nvim'},
-
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},
-
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'L3MON4D3/LuaSnip'},
-          }
-        },
-        {
-          "max397574/better-escape.nvim",
-          config = function()
-            require("better_escape").setup()
-          end,
-        },
-        {
-          'nvim-lualine/lualine.nvim',
-          requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-        },
-        {
-          "lukas-reineke/indent-blankline.nvim",
-          config = function()
-            require("ibl").setup()
-          end
-        },
-        {
-          "echasnovski/mini.pairs"
-        },
-        {
-          "akinsho/toggleterm.nvim",
-          tag = "v2.9.0",
-          config = function()
-            require("toggleterm").setup{
-              start_in_insert = true,
-            }
-          end
-        },
+      {'neovim/nvim-lspconfig'},
+      {'hrsh7th/nvim-cmp'},
+      {'hrsh7th/cmp-nvim-lsp'},
+      {'L3MON4D3/LuaSnip'},
+    }
+  },
+  {
+    "max397574/better-escape.nvim",
+    config = function()
+      require("better_escape").setup()
+    end,
+  },
+  {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      require("ibl").setup()
+    end
+  },
+  {
+    "echasnovski/mini.pairs"
+  },
+  {
+    "akinsho/toggleterm.nvim",
+    tag = "v2.9.0",
+    config = function()
+      require("toggleterm").setup{
+        start_in_insert = true,
       }
+    end
+  },
+  {
+    "stevearc/aerial.nvim",
+    config = function()
+      require("aerial").setup{
+        close_on_select = true,
+      }
+    end,
+  }
+}
