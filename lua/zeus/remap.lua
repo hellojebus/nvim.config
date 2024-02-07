@@ -14,6 +14,8 @@ Map("n", "<leader>1", ":Ex<CR>")
 Map("n", "<leader>hd", ":Gitsigns diffthis<CR>")
 Map("n", "<leader>hp", ":Gitsigns preview_hunk<CR>")
 Map("n", "<leader>hb", ":Gitsigns toggle_current_line_blame<CR>")
+Map("n", "<leader>h;", ":Gitsigns next_hunk<CR>zz")
+Map("n", "<leader>h,", ":Gitsigns prev_hunk<CR>zz")
 
 -- ToggleTerm
 Map("n", "<leader>t", ":ToggleTerm<CR>")

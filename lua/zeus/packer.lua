@@ -82,5 +82,8 @@ require('pckr').add {
         close_on_select = true,
       }
     end,
-  }
+  },
+  {
+    "tpope/vim-fugitive",
+  },
 }
