@@ -80,6 +80,7 @@ require('pckr').add {
     config = function()
       require("aerial").setup{
         close_on_select = true,
+        default_direction = "left",
       }
     end,
   },
