@@ -2,13 +2,13 @@ local function bootstrap_pckr()
   local pckr_path = vim.fn.stdpath("data") .. "/pckr/pckr.nvim"
 
   if not vim.loop.fs_stat(pckr_path) then
-      vim.fn.system({
-          'git',
-          'clone',
-          "--filter=blob:none",
-          'https://github.com/lewis6991/pckr.nvim',
-          pckr_path
-      })
+    vim.fn.system({
+      'git',
+      'clone',
+      "--filter=blob:none",
+      'https://github.com/lewis6991/pckr.nvim',
+      pckr_path
+    })
   end
 
   vim.opt.rtp:prepend(pckr_path)
@@ -20,14 +20,14 @@ require('pckr').add {
   "williamboman/mason.nvim",
   "lewis6991/gitsigns.nvim",
   {
-    'nvim-telescope/telescope.nvim', tag = '0.1.5', requires = { {'nvim-lua/plenary.nvim'} }
+    'nvim-telescope/telescope.nvim', tag = '0.1.5', requires = { { 'nvim-lua/plenary.nvim' } }
   },
   {
     'jvgrootveld/telescope-zoxide'
   },
   {
     "rebelot/kanagawa.nvim",
-    config = function ()
+    config = function()
       vim.cmd("colorscheme kanagawa")
     end
   },
@@ -39,12 +39,12 @@ require('pckr').add {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v3.x',
     requires = {
-      {'williamboman/mason.nvim'},
-      {'williamboman/mason-lspconfig.nvim'},
-      {'neovim/nvim-lspconfig'},
-      {'hrsh7th/nvim-cmp'},
-      {'hrsh7th/cmp-nvim-lsp'},
-      {'L3MON4D3/LuaSnip'},
+      { 'williamboman/mason.nvim' },
+      { 'williamboman/mason-lspconfig.nvim' },
+      { 'neovim/nvim-lspconfig' },
+      { 'hrsh7th/nvim-cmp' },
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'L3MON4D3/LuaSnip' },
     }
   },
   {
@@ -70,7 +70,7 @@ require('pckr').add {
     "akinsho/toggleterm.nvim",
     tag = "v2.9.0",
     config = function()
-      require("toggleterm").setup{
+      require("toggleterm").setup {
         start_in_insert = true,
       }
     end
@@ -78,7 +78,7 @@ require('pckr').add {
   {
     "stevearc/aerial.nvim",
     config = function()
-      require("aerial").setup{
+      require("aerial").setup {
         close_on_select = true,
         default_direction = "left",
       }
@@ -86,5 +86,8 @@ require('pckr').add {
   },
   {
     "tpope/vim-fugitive",
+  },
+  {
+    "gbrlsnchs/telescope-lsp-handlers.nvim",
   },
 }
