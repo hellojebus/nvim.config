@@ -3,16 +3,16 @@ local lsp_zero = require('lsp-zero')
 lsp_zero.on_attach(function(client, bufnr)
   -- see :help lsp-zero-keybindings
   -- to learn the available actions
-  lsp_zero.default_keymaps({buffer = bufnr})
-  lsp_zero.buffer_autoformat()
+  lsp_zero.default_keymaps({ buffer = bufnr })
+  -- lsp_zero.buffer_autoformat()
 end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = {"tsserver", "lua_ls", "html", "cssls", "jsonls"},
-    handlers = {
-        lsp_zero.default_setup,
-    },
+  ensure_installed = { "tsserver", "lua_ls", "html", "cssls", "jsonls" },
+  handlers = {
+    lsp_zero.default_setup,
+  },
 })
 
 require('lspconfig').tsserver.setup({})
@@ -23,7 +23,7 @@ local cmp_action = require('lsp-zero').cmp_action()
 cmp.setup({
   mapping = cmp.mapping.preset.insert({
     -- `Enter` key to confirm completion
-    ['<CR>'] = cmp.mapping.confirm({select = false}),
+    ['<CR>'] = cmp.mapping.confirm({ select = false }),
 
     -- Ctrl+Space to trigger completion menu
     ['<C-Space>'] = cmp.mapping.complete(),
@@ -36,20 +36,18 @@ cmp.setup({
     ['<C-u>'] = cmp.mapping.scroll_docs(-4),
     ['<C-d>'] = cmp.mapping.scroll_docs(4),
     ['<Tab>'] = function(fallback)
-        if cmp.visible() then
-            cmp.select_next_item()
-        else
-            fallback()
-        end
+      if cmp.visible() then
+        cmp.select_next_item()
+      else
+        fallback()
+      end
     end,
     ['<S-Tab>'] = function(fallback)
-        if cmp.visible() then
-            cmp.select_prev_item()
-        else
-            fallback()
-        end
+      if cmp.visible() then
+        cmp.select_prev_item()
+      else
+        fallback()
+      end
     end,
+  })
 })
-})
-
-
