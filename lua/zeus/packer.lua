@@ -96,4 +96,10 @@ require("pckr").add({
 	{
 		"stevearc/conform.nvim",
 	},
+	{
+		"ray-x/go.nvim",
+		config = function()
+			require("go").setup()
+		end,
+	},
 })

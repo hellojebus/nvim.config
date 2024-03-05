@@ -9,13 +9,14 @@ end)
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
-	ensure_installed = { "tsserver", "lua_ls", "html", "cssls", "jsonls" },
+	ensure_installed = { "tsserver", "lua_ls", "html", "cssls", "jsonls", "gopls" },
 	handlers = {
 		lsp_zero.default_setup,
 	},
 })
 
 require("lspconfig").tsserver.setup({})
+require("lspconfig").gopls.setup({})
 
 local cmp = require("cmp")
 
