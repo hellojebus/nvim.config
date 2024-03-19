@@ -11,3 +11,4 @@ vim.opt.wrap = false
 vim.opt.swapfile = false
 
 vim.opt.cursorline = true
+vim.opt.conceallevel = 1

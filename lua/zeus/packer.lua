@@ -102,4 +102,20 @@ require("pckr").add({
 			require("go").setup()
 		end,
 	},
+	{
+		"cuducos/yaml.nvim",
+		ft = { "yaml" },
+		requires = {
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-telescope/telescope.nvim",
+		},
+	},
+	{
+		"epwalsh/obsidian.nvim",
+		tag = "v3.7.3", -- recommended, use latest release instead of latest commit
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
+		after = "hrsh7th/nvim-cmp",
+	},
 })
