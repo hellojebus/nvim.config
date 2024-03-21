@@ -25,6 +25,9 @@ Map("t", "<Esc>", "<C-\\><C-n>")
 Map("n", "<leader>o", ":AerialToggle<CR>")
 
 -- obsidian
+Map("n", "<leader>ot", ":ObsidianToday<CR>")
+Map("n", "<leader>oy", ":ObsidianYesterday<CR>")
+Map("n", "<leader>on", ":ObsidianNew<CR>")
 Map("n", "<leader>od", ":ObsidianDailies<CR>")
 Map("n", "<leader>os", ":ObsidianSearch<CR>")
-Map("n", "<leader>oc", ":ToggleCheckbox<CR>")
+Map("n", "<leader>x", ":ToggleCheckbox<CR>")

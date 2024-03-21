@@ -12,3 +12,4 @@ vim.opt.swapfile = false
 
 vim.opt.cursorline = true
 vim.opt.conceallevel = 1
+vim.opt.backupcopy = "yes"
