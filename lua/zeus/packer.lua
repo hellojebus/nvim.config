@@ -28,9 +28,9 @@ require("pckr").add({
 		"jvgrootveld/telescope-zoxide",
 	},
 	{
-		"rebelot/kanagawa.nvim",
+		"ellisonleao/gruvbox.nvim",
 		config = function()
-			vim.cmd("colorscheme kanagawa")
+			vim.cmd("colorscheme gruvbox")
 		end,
 	},
 	{
