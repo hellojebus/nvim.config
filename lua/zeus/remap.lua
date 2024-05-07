@@ -31,3 +31,6 @@ Map("n", "<leader>on", ":ObsidianNew<CR>")
 Map("n", "<leader>od", ":ObsidianDailies<CR>")
 Map("n", "<leader>os", ":ObsidianSearch<CR>")
 Map("n", "<leader>x", ":ToggleCheckbox<CR>")
+Map("i", "<C-l>", "copilot#Accept()", { expr = true, replace_keycodes = false })
+-- todo: remove
+vim.g.copilot_no_tab_map = true

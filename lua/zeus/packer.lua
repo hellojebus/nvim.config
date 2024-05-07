@@ -28,9 +28,9 @@ require("pckr").add({
 		"jvgrootveld/telescope-zoxide",
 	},
 	{
-		"ellisonleao/gruvbox.nvim",
+		"AlexvZyl/nordic.nvim",
 		config = function()
-			vim.cmd("colorscheme gruvbox")
+			vim.cmd("colorscheme nordic")
 		end,
 	},
 	{
@@ -117,5 +117,14 @@ require("pckr").add({
 			"nvim-lua/plenary.nvim",
 		},
 		after = "hrsh7th/nvim-cmp",
+	},
+	{
+		"pmizio/typescript-tools.nvim",
+		config = function()
+			--require("typescript-tools").setup({})
+		end,
+	},
+	{
+		"github/copilot.vim",
 	},
 })
