@@ -22,8 +22,8 @@ require("lspconfig").tsserver.setup({
 		},
 	},
 	on_attach = function(client, bufnr)
-		client.resolved_capabilities.document_formatting = false
-		client.resolved_capabilities.document_range_formatting = false
+		--client.resolved_capabilities.document_formatting = false
+		--client.resolved_capabilities.document_range_formatting = false
 
 		-- Setup typescript-tools within tsserver on_attach
 		--local ts_utils = require("typescript-tools.utils")
@@ -34,7 +34,7 @@ require("lspconfig").tsserver.setup({
 require("lspconfig").cssmodules_ls.setup({
 	on_attach = function(client)
 		client.server_capabilities.definitionProvider = false
-		custom_on_attach(client)
+		--custom_on_attach(client)
 	end,
 })
 
