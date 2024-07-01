@@ -28,9 +28,9 @@ require("pckr").add({
 		"jvgrootveld/telescope-zoxide",
 	},
 	{
-		"AlexvZyl/nordic.nvim",
+		"ribru17/bamboo.nvim",
 		config = function()
-			vim.cmd("colorscheme nordic")
+			vim.cmd("colorscheme bamboo")
 		end,
 	},
 	{
