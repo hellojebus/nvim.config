@@ -28,6 +28,8 @@ require("lspconfig").tsserver.setup({
 		-- Setup typescript-tools within tsserver on_attach
 		--local ts_utils = require("typescript-tools.utils")
 		--ts_utils.setup_client(client)
+		local bufopts = { noremap = true, silent = true, buffer = bufnr }
+		vim.keymap.set("n", "<space>e", vim.diagnostic.open_float, bufopts)
 	end,
 })
 
